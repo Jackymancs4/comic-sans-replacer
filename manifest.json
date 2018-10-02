@@ -1,17 +1,24 @@
 {
-  "version": "1.0",
+  "manifest_version": 2,
   "name": "Comic Sans Replacer",
+  "version": "1.0.0",
   "description": "Replace Comic Sans MS font on all websites with Comic Neue font by Craig Rozynski",
-  "author": "niu tech",
   "icons": {
     "48": "icon.png",
     "128": "icon.png"
   },
+  "applications": {
+    "gecko": {
+      "id": "@comic-sans-replacer",
+      "strict_min_version": "57.0"
+    }
+  },
+  "author": "Giacomo Rossetto",
+  "homepage_url": "https://github.com/Jackymancs4/comic-sans-replacer",
   "content_scripts": [
     {
       "matches": ["*://*/*"],
       "css": ["userContent.css"]
     }
   ],
-  "manifest_version": 2
 }
